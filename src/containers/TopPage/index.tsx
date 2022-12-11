@@ -12,11 +12,11 @@ const TopPage = () => {
   return (
     <div>
       <div className="flex flex-grow">
-        <div className="img">
+        <div className="w-1/3">
           <img
             src="/images/main_photo.png"
             alt="Legacy"
-            className="object-cover"
+            className="object-cover w-full"
           />
         </div>
         <Chart />
