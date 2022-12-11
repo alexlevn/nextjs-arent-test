@@ -1,17 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
+import Chart from 'src/components/Chart'
+
 const TopPage = () => {
+  const arrItems = [
+    { id: 1, title: 'Morning', image: '/images/icon_knife.svg' },
+    { id: 1, title: 'Lunch', image: '/images/icon_knife.svg' },
+    { id: 1, title: 'Dinner', image: '/images/icon_knife.svg' },
+    { id: 1, title: 'Slact', image: '/images/icon_cup.svg' },
+  ]
   return (
     <div>
-      <div className="flex ">
-        <div className="w-1/3">
+      <div className="flex flex-grow">
+        <div className="img">
           <img
             src="/images/main_photo.png"
             alt="Legacy"
-            className="w-full h-full object-cover"
+            className="object-cover"
           />
         </div>
-        <div className="bg-pc_dark_gray w-2/3 flex items-center justify-center">
-          <img src="/images/main_graph.png" alt="Legacy" className="" />
+        <Chart />
+      </div>
+
+      <div className="max-w-desktop ">
+        {/* Option Buttons */}
+        <div className="flex justify-around mt-10">
+          {arrItems.map((item) => (
+            <div
+              key={item.id}
+              className="flex flex-col items-center justify-center  btn-polygon h-36 w-36 cursor-pointer"
+              style={{
+                clipPath:
+                  'polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%)',
+              }}
+            >
+              <img src={item.image} alt="Legacy" />
+              <p className="btn-label text-sm mt-2">{item.title}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

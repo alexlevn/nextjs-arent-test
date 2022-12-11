@@ -46,3 +46,16 @@
 .popper-menu-item {
   padding: 32px 23px;
 }
+
+.btn-polygon {
+  background: linear-gradient(155.89deg, #ffcc21 8.26%, #ff963c 91.18%);
+}
+
+.btn-label {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
