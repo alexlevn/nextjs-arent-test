@@ -2,7 +2,7 @@ import Image from 'next/legacy/image'
 import { FC, useState } from 'react'
 
 const PopperMenu: FC = () => {
-  const [arrMenuItems, setArrMenuItems] = useState([
+  const [arrMenuItems, _] = useState([
     {
       id: 1,
       title: '自分の記録',

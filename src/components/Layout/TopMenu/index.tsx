@@ -16,12 +16,12 @@ const TopMenu: FC = () => {
             src="/images/healthy_logo.svg"
             alt="logo"
             width={144}
-            height={100}
+            height={64}
           />
         </div>
 
         <div className="right flex gap-2">
-          <div className="flex gap-28 items-center">
+          <div className="flex gap-10 items-center">
             {ROURES.map((item) => (
               <Link
                 href={item.path}
@@ -30,7 +30,7 @@ const TopMenu: FC = () => {
               >
                 <div
                   className={
-                    'pt-1 cursor-pointer ' + (item.bagde ? ' relative' : '')
+                    'cursor-pointer ' + (item.bagde ? ' relative' : '')
                   }
                 >
                   <Image
