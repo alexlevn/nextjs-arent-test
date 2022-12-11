@@ -1,4 +1,5 @@
 import Image from 'next/legacy/image'
+import { useRouter } from 'next/router'
 import { FC } from 'react'
 
 interface ITypTopMenuItems {
@@ -10,6 +11,7 @@ interface ITypTopMenuItems {
   bagde?: number
 }
 const TopMenu: FC = () => {
+  const router = useRouter()
   const arrTopMenuItems: ITypTopMenuItems[] = [
     {
       id: 1,
@@ -37,7 +39,10 @@ const TopMenu: FC = () => {
   return (
     <div className="w-full bg-pc_gray">
       <div className="max-w-desktop flex gap-10 justify-between">
-        <div className="logo">
+        <div 
+        className="logo"
+        onClick={() => router.push('/')}
+        >
           <Image
             src="/images/healthy_logo.svg"
             alt="logo"
@@ -51,10 +56,14 @@ const TopMenu: FC = () => {
           {/* menu */}
           <div className="flex gap-5 items-center">
             {arrTopMenuItems.map((item) => (
-              <div key={item.id} className="flex gap-2 items-center h-14">
+              <div
+                key={item.id}
+                className="flex gap-2 items-center h-14"
+                onClick={() => router.push(item.link)}
+              >
                 <div
                   className={
-                    'cursor-pointer ' + (item.bagde ? ' relative' : '')
+                    'pt-1 cursor-pointer ' + (item.bagde ? ' relative' : '')
                   }
                 >
                   <Image
