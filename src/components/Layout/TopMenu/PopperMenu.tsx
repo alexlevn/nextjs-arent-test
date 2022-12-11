@@ -53,7 +53,10 @@ const PopperMenu: FC = () => {
           />
           <div className="w-full">
             {arrMenuItems.map((item) => (
-              <div className="popper-menu-item bg-pc_light_gray" key={item.id}>
+              <div
+                className="popper-menu-item bg-pc_light_gray text-lg font-bold"
+                key={item.id}
+              >
                 {item.title}
               </div>
             ))}

@@ -36,8 +36,8 @@ const TopMenu: FC = () => {
                   <Image
                     src={item.icon}
                     alt={item.name}
-                    width={30}
-                    height={30}
+                    width={32}
+                    height={32}
                   />
                   {item.bagde && (
                     <div className="bg-pc_orange text-white  text-xs rounded-full w-4 h-4 flex items-center justify-center -top-1 -right-1 absolute ">
@@ -46,7 +46,7 @@ const TopMenu: FC = () => {
                   )}
                 </div>
 
-                <div className="text-white hover:text-pc_orange text-sm">
+                <div className="text-white hover:text-pc_orange text-lg mb-2">
                   {item.title}
                 </div>
               </Link>
