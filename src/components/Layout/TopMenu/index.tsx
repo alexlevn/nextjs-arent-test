@@ -14,21 +14,21 @@ const TopMenu: FC = () => {
     {
       id: 1,
       name: 'Profile',
-      title: 'Home',
-      link: '/',
+      title: '自分の記録',
+      link: '/profile',
       icon: '/images/profile.svg',
     },
     {
       id: 2,
       name: 'Challenge',
-      title: 'Home',
+      title: 'チャレンジ',
       link: '/challenge',
       icon: '/images/challenge.svg',
     },
     {
       id: 3,
       name: 'News',
-      title: 'Home',
+      title: 'お知らせ',
       link: '/news',
       icon: '/images/news.svg',
       bagde: 3,
@@ -36,21 +36,22 @@ const TopMenu: FC = () => {
   ]
   return (
     <div className="w-full bg-pc_gray">
-      <div className="max-w-desktop flex gap-10 my-3 justify-between">
+      <div className="max-w-desktop flex gap-10 justify-between">
         <div className="logo">
           <Image
             src="/images/healthy_logo.svg"
             alt="logo"
-            width={150}
+            width={144}
             height={100}
           />
         </div>
 
         {/* right header*/}
         <div className="right flex gap-2">
+          {/* menu */}
           <div className="flex gap-5 items-center">
             {arrTopMenuItems.map((item) => (
-              <div key={item.id} className="flex gap-2 items-center">
+              <div key={item.id} className="flex gap-2 items-center h-14">
                 <div
                   className={
                     'cursor-pointer ' + (item.bagde ? ' relative' : '')
@@ -69,9 +70,21 @@ const TopMenu: FC = () => {
                   )}
                 </div>
 
-                <div className="text-white text-sm">{item.name}</div>
+                <div className="text-white text-sm">{item.title}</div>
               </div>
             ))}
+
+            {/* poper menu */}
+            <div className="flex gap-2 items-center h-14">
+              <div className="cursor-pointer relative">
+                <Image
+                  src="/images/bars.svg"
+                  alt="menu"
+                  width={30}
+                  height={30}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
