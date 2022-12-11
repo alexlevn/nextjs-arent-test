@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { ROURES } from 'src/common/routes'
 import Link from 'next/link'
+import PopperMenu from './PopperMenu'
 
 const TopMenu: FC = () => {
   const router = useRouter()
@@ -19,9 +20,7 @@ const TopMenu: FC = () => {
           />
         </div>
 
-        {/* right header*/}
         <div className="right flex gap-2">
-          {/* menu */}
           <div className="flex gap-28 items-center">
             {ROURES.map((item) => (
               <Link
@@ -52,18 +51,7 @@ const TopMenu: FC = () => {
                 </div>
               </Link>
             ))}
-
-            {/* poper menu */}
-            <div className="flex gap-2 items-center h-14">
-              <div className="cursor-pointer relative">
-                <Image
-                  src="/images/bars.svg"
-                  alt="menu"
-                  width={30}
-                  height={30}
-                />
-              </div>
-            </div>
+            <PopperMenu />
           </div>
         </div>
       </div>

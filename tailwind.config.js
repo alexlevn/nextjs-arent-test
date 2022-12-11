@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         pc_gray: '#414141',
         pc_orange: '#FF963C',
+        pc_light_gray: '#777777',
       },
     },
   },
