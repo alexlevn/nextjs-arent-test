@@ -1,14 +1,21 @@
 import { FC, useState } from 'react'
 
-const recordItem = {
-  name: '家事全般（立位・軽い）',
-  kcal: Math.floor(Math.random() * 100),
-  time: Math.floor(Math.random() * 20),
+interface IRecord {
+  name: string
+  kcal: number
+  time: number
 }
+
+const recordItem: IRecord = {
+  name: '家事全般（立位・軽い）',
+  kcal: 345,
+  time: 12,
+}
+
 const arrItems = Array(50).fill(recordItem)
 
 const BodyRecord: FC = () => {
-  const [data, setData] = useState(arrItems)
+  const [data, _] = useState<IRecord[]>(arrItems)
   return (
     <div className="bg-pc_gray text-white p-5">
       <h2 className="uppercase font-sans">Body Record</h2>
