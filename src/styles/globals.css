@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.debug * {
+  outline: 1px solid gold;
+}
+
+.layout {
+  @apply flex flex-col min-h-screen justify-between text-white;
+}
+
+.max-w-desktop {
+  @apply max-w-7xl mx-auto;
+}
