@@ -9,7 +9,7 @@ const TopMenu: FC = () => {
   const router = useRouter()
 
   return (
-    <div className="w-full bg-pc_gray">
+    <div className="w-full bg-pc_gray fixed z-20">
       <div className="max-w-desktop flex gap-10 justify-between">
         <div className="logo pt-3" onClick={() => router.push('/')}>
           <Image

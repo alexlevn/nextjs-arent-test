@@ -19,7 +19,7 @@
 }
 
 .popper-menu {
-  @apply absolute w-60 top-14 right-0  bg-pc_gray rounded-sm shadow-lg text-white;
+  @apply absolute w-60 top-14 right-0  bg-pc_gray rounded-sm shadow-lg text-white z-10;
 }
 
 .popper-menu {
@@ -68,4 +68,17 @@
   width: 296px;
   height: 56px;
   background: linear-gradient(32.95deg, #ffcc21 8.75%, #ff963c 86.64%);
+}
+
+.record-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.125px;
+}
+
+.record-title {
+  @apply text-center text-pc_yellow;
 }

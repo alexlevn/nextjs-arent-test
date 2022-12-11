@@ -1,8 +1,6 @@
 import { NextPage } from 'next'
-import MyRecord from 'src/containers/MyRecord'
 
-const Challenge: NextPage = () => {
-  return <MyRecord />
+const ChallengePage: NextPage = () => {
+  return <div>Challenge Page</div>
 }
-
-export default Challenge
+export default ChallengePage

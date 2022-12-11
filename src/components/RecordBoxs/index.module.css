@@ -1,0 +1,12 @@
+.record_title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.125px;
+}
+
+.record_title {
+  @apply text-center text-pc_yellow;
+}

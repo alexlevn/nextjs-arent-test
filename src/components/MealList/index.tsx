@@ -50,7 +50,6 @@ const MealList = () => {
         ))}
       </div>
 
-      {/* Load More Buttons */}
       <div
         className="flex justify-center my-10"
         onClick={() => {

@@ -8,7 +8,7 @@ interface IRoute {
 }
 
 
-const PROFILE = "/profile"
+const MY_RECORDS = "/my-records"
 const CHALLENGE = "/challenge"
 const NEWS = "/news"
 
@@ -18,7 +18,7 @@ export const ROURES: IRoute[] = [
         id: 1,
         name: 'Profile',
         title: '自分の記録',
-        path: PROFILE,
+        path: MY_RECORDS,
         icon: '/images/profile.svg',
     },
     {
