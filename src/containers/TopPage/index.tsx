@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Chart from 'src/components/Chart'
+import MealList from 'src/components/MealList'
 
 const TopPage = () => {
   const arrItems = [
     { id: 1, title: 'Morning', image: '/images/icon_knife.svg' },
-    { id: 1, title: 'Lunch', image: '/images/icon_knife.svg' },
-    { id: 1, title: 'Dinner', image: '/images/icon_knife.svg' },
-    { id: 1, title: 'Slact', image: '/images/icon_cup.svg' },
+    { id: 2, title: 'Lunch', image: '/images/icon_knife.svg' },
+    { id: 3, title: 'Dinner', image: '/images/icon_knife.svg' },
+    { id: 4, title: 'Slact', image: '/images/icon_cup.svg' },
   ]
   return (
     <div>
@@ -22,7 +23,6 @@ const TopPage = () => {
       </div>
 
       <div className="max-w-desktop ">
-        {/* Option Buttons */}
         <div className="flex justify-around mt-10">
           {arrItems.map((item) => (
             <div
@@ -38,6 +38,8 @@ const TopPage = () => {
             </div>
           ))}
         </div>
+
+        <MealList />
       </div>
     </div>
   )
