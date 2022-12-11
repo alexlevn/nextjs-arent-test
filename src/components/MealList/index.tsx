@@ -50,13 +50,15 @@ const MealList = () => {
         ))}
       </div>
 
-      <div
-        className="flex justify-center my-10"
-        onClick={() => {
-          setData([...data, ...meals])
-        }}
-      >
-        <div className="btn-load-more">記録をもっと見る</div>
+      <div className="flex justify-center my-10">
+        <button
+          className="btn-load-more"
+          onClick={() => {
+            setData([...data, ...meals])
+          }}
+        >
+          記録をもっと見る
+        </button>
       </div>
     </>
   )
