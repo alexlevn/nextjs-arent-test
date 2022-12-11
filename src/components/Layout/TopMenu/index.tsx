@@ -1,35 +1,42 @@
 import Image from 'next/legacy/image'
+import { FC } from 'react'
 
-const TopMenu = () => {
-  const arrTopMenuItems = [
+interface ITypTopMenuItems {
+  id: number
+  name: string
+  title: string
+  link: string
+  icon: string
+  bagde?: number
+}
+const TopMenu: FC = () => {
+  const arrTopMenuItems: ITypTopMenuItems[] = [
     {
       id: 1,
-      name: 'Home',
+      name: 'Profile',
       title: 'Home',
-      icon: '/images/profile.svg',
       link: '/',
+      icon: '/images/profile.svg',
     },
     {
       id: 2,
-      name: 'About',
+      name: 'Challenge',
       title: 'Home',
-      link: '/about',
+      link: '/challenge',
       icon: '/images/challenge.svg',
     },
     {
       id: 3,
-      name: 'Contact',
+      name: 'News',
       title: 'Home',
-      link: '/contact',
+      link: '/news',
       icon: '/images/news.svg',
+      bagde: 3,
     },
   ]
   return (
     <div className="w-full bg-pc_gray">
-      <div className="max-w-desktop flex gap-10 my-3">
-        {/* <img src = "/images/logo.png" alt = "logo" className = "w-20 h-20" /> */}
-        {/* use Legacy Image in NextJs */}
-
+      <div className="max-w-desktop flex gap-10 my-3 justify-between">
         <div className="logo">
           <Image
             src="/images/healthy_logo.svg"
@@ -39,7 +46,34 @@ const TopMenu = () => {
           />
         </div>
 
-        <div className="flex gap-5 items-center"></div>
+        {/* right header*/}
+        <div className="right flex gap-2">
+          <div className="flex gap-5 items-center">
+            {arrTopMenuItems.map((item) => (
+              <div key={item.id} className="flex gap-2 items-center">
+                <div
+                  className={
+                    'cursor-pointer ' + (item.bagde ? ' relative' : '')
+                  }
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.name}
+                    width={30}
+                    height={30}
+                  />
+                  {item.bagde && (
+                    <div className="bg-pc_orange text-white text-xs rounded-full w-4 h-4 flex items-center justify-center -top-1 -right-1 absolute ">
+                      {item.bagde}
+                    </div>
+                  )}
+                </div>
+
+                <div className="text-white text-sm">{item.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )
