@@ -4,8 +4,10 @@ import TopMenu from './TopMenu'
 const Layout: React.FC<{ children: any }> = ({ children }) => {
   return (
     <div className="layout">
-      <TopMenu />
-      {children}
+      <div className="flex flex-col">
+        <TopMenu />
+        <div className="max-w-desktop w-full">{children}</div>
+      </div>
       <Footer />
     </div>
   )
