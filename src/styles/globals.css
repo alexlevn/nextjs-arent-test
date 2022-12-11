@@ -22,23 +22,27 @@
   @apply absolute w-60 top-14 right-0  bg-pc_gray rounded-sm shadow-lg text-white;
 }
 
-.popper-menu{
-    min-width: 280px;
+.popper-menu {
+  min-width: 280px;
 }
 
 .popper .popper-menu {
   display: none;
-  
 }
 
 .popper:hover .popper-menu {
   display: block;
- 
+}
+
+.border-pc_horizon-opacity-10 {
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .popper-menu-item {
-  @apply cursor-pointer hover:opacity-95 hover:text-pc_orange;
+  @apply cursor-pointer hover:text-pc_orange
+  border-t border-pc_horizon-opacity-10;
 }
+
 .popper-menu-item {
   padding: 32px 23px;
 }
