@@ -11,7 +11,7 @@ const TopMenu: FC = () => {
   return (
     <div className="w-full bg-pc_gray">
       <div className="max-w-desktop flex gap-10 justify-between">
-        <div className="logo" onClick={() => router.push('/')}>
+        <div className="logo pt-3" onClick={() => router.push('/')}>
           <Image
             src="/images/healthy_logo.svg"
             alt="logo"
