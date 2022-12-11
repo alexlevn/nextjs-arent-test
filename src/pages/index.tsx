@@ -1,7 +1,8 @@
-import type { NextPage } from 'next'
+import { NextPage } from 'next'
+import TopPage from 'src/containers/TopPage'
 
-const Home: NextPage = () => {
-  return <div>Home page</div>
+const Profile: NextPage = () => {
+  return <TopPage />
 }
 
-export default Home
+export default Profile

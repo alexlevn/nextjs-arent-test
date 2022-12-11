@@ -1,9 +1,7 @@
-const Profile = () => {
-  return (
-    <div>
-      <h1>Profile</h1>
-    </div>
-  )
+import { NextPage } from 'next'
+
+const Profile: NextPage = () => {
+  return <div>Profile Page</div>
 }
 
 export default Profile

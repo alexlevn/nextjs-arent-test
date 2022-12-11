@@ -22,12 +22,12 @@ const TopMenu: FC = () => {
         {/* right header*/}
         <div className="right flex gap-2">
           {/* menu */}
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-28 items-center">
             {ROURES.map((item) => (
               <Link
                 href={item.path}
                 key={item.id}
-                className="flex gap-2 items-center h-14 cursor-pointer"
+                className="flex gap-3 items-center h-14 cursor-pointer"
               >
                 <div
                   className={
