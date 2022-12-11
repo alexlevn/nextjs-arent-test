@@ -30,7 +30,7 @@ const PopperMenu: FC = () => {
       path: '/',
     },
     {
-      id:6,
+      id: 6,
       title: '設定',
       path: '/',
     },
@@ -44,7 +44,13 @@ const PopperMenu: FC = () => {
 
       <div className="popper-menu">
         <div className="flex flex-col items-end">
-          <Image src="/images/close.svg" alt="menu" width={30} height={30}  className="cursor-pointer" />
+          <Image
+            src="/images/close.svg"
+            alt="menu"
+            width={30}
+            height={30}
+            className="cursor-pointer"
+          />
           <div className="w-full">
             {arrMenuItems.map((item) => (
               <div className="popper-menu-item bg-pc_light_gray" key={item.id}>
