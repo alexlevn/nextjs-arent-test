@@ -39,10 +39,7 @@ const TopMenu: FC = () => {
   return (
     <div className="w-full bg-pc_gray">
       <div className="max-w-desktop flex gap-10 justify-between">
-        <div 
-        className="logo"
-        onClick={() => router.push('/')}
-        >
+        <div className="logo" onClick={() => router.push('/')}>
           <Image
             src="/images/healthy_logo.svg"
             alt="logo"
@@ -58,7 +55,7 @@ const TopMenu: FC = () => {
             {arrTopMenuItems.map((item) => (
               <div
                 key={item.id}
-                className="flex gap-2 items-center h-14"
+                className="flex gap-2 items-center h-14 cursor-pointer"
                 onClick={() => router.push(item.link)}
               >
                 <div
@@ -73,13 +70,15 @@ const TopMenu: FC = () => {
                     height={30}
                   />
                   {item.bagde && (
-                    <div className="bg-pc_orange text-white text-xs rounded-full w-4 h-4 flex items-center justify-center -top-1 -right-1 absolute ">
+                    <div className="bg-pc_orange text-white  text-xs rounded-full w-4 h-4 flex items-center justify-center -top-1 -right-1 absolute ">
                       {item.bagde}
                     </div>
                   )}
                 </div>
 
-                <div className="text-white text-sm">{item.title}</div>
+                <div className="text-white hover:text-pc_orange text-sm">
+                  {item.title}
+                </div>
               </div>
             ))}
 
