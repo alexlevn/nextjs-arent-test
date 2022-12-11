@@ -27,7 +27,7 @@ const Footer: FC = () => {
       link: '#',
     },
   ]
-  /* max width 7xl = 1280px */
+
   return (
     <div className="w-full bg-pc_gray">
       <div className="max-w-desktop flex gap-10 my-10">
