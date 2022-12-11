@@ -1,41 +1,12 @@
 import Image from 'next/legacy/image'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
+import { ROURES } from 'src/common/routes'
+import Link from 'next/link'
 
-interface ITypTopMenuItems {
-  id: number
-  name: string
-  title: string
-  link: string
-  icon: string
-  bagde?: number
-}
 const TopMenu: FC = () => {
   const router = useRouter()
-  const arrTopMenuItems: ITypTopMenuItems[] = [
-    {
-      id: 1,
-      name: 'Profile',
-      title: '自分の記録',
-      link: '/profile',
-      icon: '/images/profile.svg',
-    },
-    {
-      id: 2,
-      name: 'Challenge',
-      title: 'チャレンジ',
-      link: '/challenge',
-      icon: '/images/challenge.svg',
-    },
-    {
-      id: 3,
-      name: 'News',
-      title: 'お知らせ',
-      link: '/news',
-      icon: '/images/news.svg',
-      bagde: 3,
-    },
-  ]
+
   return (
     <div className="w-full bg-pc_gray">
       <div className="max-w-desktop flex gap-10 justify-between">
@@ -52,11 +23,11 @@ const TopMenu: FC = () => {
         <div className="right flex gap-2">
           {/* menu */}
           <div className="flex gap-5 items-center">
-            {arrTopMenuItems.map((item) => (
-              <div
+            {ROURES.map((item) => (
+              <Link
+                href={item.path}
                 key={item.id}
                 className="flex gap-2 items-center h-14 cursor-pointer"
-                onClick={() => router.push(item.link)}
               >
                 <div
                   className={
@@ -79,7 +50,7 @@ const TopMenu: FC = () => {
                 <div className="text-white hover:text-pc_orange text-sm">
                   {item.title}
                 </div>
-              </div>
+              </Link>
             ))}
 
             {/* poper menu */}

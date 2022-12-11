@@ -1,8 +1,7 @@
-const Home = () => {
-  return (
-    // layout
-    <div>Home page</div>
-  )
+import type { NextPage } from 'next'
+
+const Home: NextPage = () => {
+  return <div>Home page</div>
 }
 
 export default Home
