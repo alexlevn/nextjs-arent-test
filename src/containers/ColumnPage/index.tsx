@@ -1,7 +1,13 @@
+import ColumnList from 'src/components/ColumnList'
+import RecommendedOptions from '../RecommendedOptions'
+
 const ColumnPage = () => {
   return (
     <div>
-      <h1>ColumnPage</h1>
+      <div className="max-w-desktop mt-10 font-sans">
+        <RecommendedOptions />
+        <ColumnList />˝
+      </div>
     </div>
   )
 }
