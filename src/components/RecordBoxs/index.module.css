@@ -1,12 +1,26 @@
 .record_title {
   font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
   font-size: 25px;
   line-height: 30px;
   letter-spacing: 0.125px;
 }
 
 .record_title {
-  @apply text-center text-pc_yellow;
+  @apply text-center text-pc_yellow uppercase font-sans font-light;
+}
+
+.record_subtitle {
+  font-family: 'Hiragino Kaku Gothic Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  width: 160px;
+}
+
+.record_subtitle {
+  @apply text-center text-white bg-pc_orange  py-1;
 }

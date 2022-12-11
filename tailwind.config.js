@@ -10,6 +10,9 @@ module.exports = {
         pc_dark_gray: '#2E2E2E',
         pc_yellow: '#FFCC21',
       },
+      fontFamily: {
+        inter: ['Inter', 'serif'],
+      },
     },
   },
   plugins: [],
