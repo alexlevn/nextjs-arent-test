@@ -16,7 +16,7 @@ const TopPage = () => {
           <img
             src="/images/main_photo.png"
             alt="Legacy"
-            className="object-cover w-full"
+            className="object-cover w-full h-full"
           />
         </div>
         <Chart />
